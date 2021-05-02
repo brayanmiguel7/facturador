@@ -987,6 +987,9 @@
                             <li class="{{ (($path[0] === 'hotels') && ($path[1] === 'rooms')) ? 'nav-active' : '' }}">
                                 <a class="nav-link" href="{{ url('hotels/rooms') }}">Habitaciones</a>
                             </li>
+                            <li class="{{ (($path[0] === 'hotels') && ($path[1] === 'rooms')) ? 'nav-active' : '' }}">
+                                <a class="nav-link" href="{{ url('hotels/workers') }}">Trabajadores</a>
+                            </li>
                         </ul>
                     </li>
                     <li class=" nav-parent {{ ($path[0] === 'documentary-procedure') ? 'nav-active nav-expanded' : '' }}">

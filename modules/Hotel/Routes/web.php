@@ -37,6 +37,9 @@ if ($hostname) {
 				Route::post('rooms/{id}/rates/store', 'HotelRoomController@addRateToRoom');
 				Route::delete('rooms/{id}/rates/{rateId}/delete', 'HotelRoomController@deleteRoomRate');
 
+				// Módulo de Trabajadores
+				Route::get('workers', 'HotelWorkersController@index');
+
 				Route::get('reception', 'HotelReceptionController@index');
 				Route::get('reception/tables', 'HotelRentController@tables');
 				Route::get('reception/tables/customers', 'HotelRentController@searchCustomers');
@@ -46,6 +49,7 @@ if ($hostname) {
 				Route::post('reception/{id}/rent/products/store', 'HotelRentController@addProductsToRoom');
 				Route::get('reception/{id}/rent/checkout', 'HotelRentController@showFormChekout');
 				Route::post('reception/{id}/rent/finalized', 'HotelRentController@finalizeRent');
+				Route::post('reception/pdf', 'HotelReceptionController@pdf') -> name('reception.report_rooms.pdf');
 			});
 	});
 }

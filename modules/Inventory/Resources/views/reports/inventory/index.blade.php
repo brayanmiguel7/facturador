@@ -87,11 +87,13 @@
                                             <td class="celda">{{$value->item->internal_id ?? ''}} {{$value->item->internal_id ? '-':''}} {{$value->item->description ?? ''}}</td>
                                             <td class='celda'>{{$value->item->unit_type_id}}</td>
                                             <td class="celda">{{optional($value->item->category)->name}}</td>
-                                            @if(intval($value->stock) > intval($value->item->stock_min))
+
+                                            @if(intval($value -> item -> stock) > intval($value->item->stock_min))
                                                 <td class="celda success">{{$value->item->stock}}</td>
-                                            @elseif(intval($value->stock) < intval($value->item->stock_min))
+                                            @elseif(intval($value -> item -> stock) < intval($value->item->stock_min))
                                                 <td class="celda danger">{{$value->item->stock}}</td>
                                             @endif
+
                                             <td class="celda">{{$value->item->sale_unit_price}}</td>
                                             <td class="celda">{{$value->item->purchase_unit_price}}</td>
                                             <td class="celda">{{ $value->item->brand->name }}</td>

@@ -5,7 +5,7 @@
         <a href="/dashboard"><i class="fas fa-tachometer-alt"></i></a>
       </h2>
       <ol class="breadcrumbs">
-        <li class="active"><span>VISTA GENERAL RECEPCIÓN</span></li>
+        <li class="active"><span>VISTA GENERAL REEPCIÓN</span></li>
       </ol>
     </div>
     <div class="card mb-0">
